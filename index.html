@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Username Popup -->
+    <div id="namePopup" class="popup">
+        <div class="popup-content">
+            <h2>Enter your name</h2>
+            <input type="text" id="usernameInput" placeholder="Your name...">
+            <button id="enterChatBtn">Enter Chat</button>
+        </div>
+    </div>
+
+    <!-- Chat Container -->
+    <div id="chatContainer" class="hidden">
+        <header>
+            <h1>Welcome to the Chat Room</h1>
+        </header>
+
+        <div id="messageBox"></div>
+
+        <div id="inputArea">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
