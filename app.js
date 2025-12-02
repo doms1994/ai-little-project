@@ -8,8 +8,7 @@ const messageInput = document.getElementById("messageInput");
 const sendBtn = document.getElementById("sendBtn");
 
 
-// Enter chat button
-document.getElementById("enterChatBtn").addEventListener("click", () => {
+function enterChat() {
     const input = document.getElementById("usernameInput").value.trim();
 
     if (input.length < 2) {
@@ -24,6 +23,13 @@ document.getElementById("enterChatBtn").addEventListener("click", () => {
 
     loadMessages();
     setInterval(loadMessages, 1000);   // auto-refresh every second
+}
+
+// Enter chat actions
+document.getElementById("enterChatBtn").addEventListener("click", enterChat);
+
+document.getElementById("usernameInput").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") enterChat();
 });
 
 
